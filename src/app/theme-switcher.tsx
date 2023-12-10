@@ -23,7 +23,7 @@ const ThemeSwitcher = () => {
 
     const currentTheme = theme === "system" ? systemTheme : theme;
 
-    const className = "w-6 h-6 absolute top-4 right-4";
+    const className = "w-6 h-6";
 
     if (currentTheme === "dark") {
       return (
@@ -36,7 +36,7 @@ const ThemeSwitcher = () => {
     } else {
       return (
         <MoonIcon
-          className={`w-6 h-6 text-gray-900 ${className}`}
+          className={`text-gray-900 ${className}`}
           role="button"
           onClick={() => setTheme("dark")}
         />

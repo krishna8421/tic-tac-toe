@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import Provider from "./provider";
 import "./globals.css";
-import ThemeSwitcher from "./theme-switcher";
+import NavBar from "./navbar";
 import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
@@ -19,8 +19,8 @@ export default function RootLayout({
     <html lang="en">
       <Provider>
         <body className={`${GeistSans.className} dark:bg-black bg-slate-50`}>
+          <NavBar />
           {children}
-          <ThemeSwitcher />
           <Toaster position="top-center" />
         </body>
       </Provider>
