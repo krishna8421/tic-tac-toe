@@ -81,7 +81,7 @@ const TicTacToeBoard: React.FC<TicTacToeBoardProps> = () => {
 };
 
 // Function to determine the winner
-function calculateWinner(squares: SquareValue[]): SquareValue | null {
+const calculateWinner = (squares: SquareValue[]): SquareValue | null => {
   const lines: number[][] = [
     [0, 1, 2],
     [3, 4, 5],
@@ -103,6 +103,6 @@ function calculateWinner(squares: SquareValue[]): SquareValue | null {
   }
 
   return null;
-}
+};
 
 export default TicTacToeBoard;
